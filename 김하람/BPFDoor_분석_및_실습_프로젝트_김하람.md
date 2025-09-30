@@ -470,7 +470,7 @@ if (size_ip < 20) continue;
 > - 기본 소켓은 os가 IP 헤더, TCP/UDP 헤더 등을 제거하고 애플리케이션이 필요로 하는 데이터(페이로드)만을 전달한다.
 > - raw socket은 이러한 추상화 없이, 데이터 링크 계층 또는 네트워크 계층의 완전한 패킷을 직접 수신할 수 있다.
 > 
-> ![Raw Socket이 받는 데이터.png](Raw_Socket%EC%9D%B4_%EB%B0%9B%EB%8A%94_%EB%8D%B0%EC%9D%B4%ED%84%B0.png)
+> ![Raw Socket이 받는 데이터.png](assets/Raw_Socket%EC%9D%B4_%EB%B0%9B%EB%8A%94_%EB%8D%B0%EC%9D%B4%ED%84%B0.png)
 > 
 
 ### **6) (while-loop) 패킷 프로토콜별 매직 패킷 설정**
@@ -1032,7 +1032,7 @@ if (mp) {
         > **소켓 통신 과정**
         > 
         > 
-        > ![image.png](image.png)
+        > ![image.png](assets/image.png)
         > 
     
 6. **shell 함수 호출 및 클라이언트 소켓 닫기**
@@ -1497,7 +1497,7 @@ struct sock_filter bpf_code[] = {
 
 ## 🔸전체 흐름 .svg
 
-![BPFDoor 흐름.svg](BPFDoor_%ED%9D%90%EB%A6%84.svg)
+![BPFDoor 흐름.svg](assets/BPFDoor_%ED%9D%90%EB%A6%84.svg)
 
 # # 실습
 
@@ -1518,22 +1518,22 @@ struct sock_filter bpf_code[] = {
 
 - 사용한 라이브러리
     
-    ![image.png](image%201.png)
+    ![image.png](assets/image%201.png)
     
 
 - RC4 암복호화
     
-    ![image.png](image%202.png)
+    ![image.png](assets/image%202.png)
     
 
 - 매직 패킷 생성 및 통신
     
-    ![image.png](image%203.png)
+    ![image.png](assets/image%203.png)
     
 
 - 입출력 과정 및 메인 실행
     
-    ![image.png](image%204.png)
+    ![image.png](assets/image%204.png)
     
 
 ### **3) 동작 과정**
@@ -1541,7 +1541,7 @@ struct sock_filter bpf_code[] = {
 1. 사용자로부터 패스워드를 입력 받고, 패스워드별 동작에 필요한 공격자 ip, 공격자 port, 사용할 password, 전송할 패킷 프로토콜 종류, 바인드 셸을 연결할 목적지 포트 등을 입력 받는다.
 2. 패스워드별로 각각 다른 동작을 위해 해당 함수를 호출한다.
     
-    ![image.png](image%205.png)
+    ![image.png](assets/image%205.png)
     
 3. 호출된 함수에 따라 패킷 구성, 소켓 생성 등이 다르게 동작한다.
 4. `_socket` 함수
@@ -1657,22 +1657,22 @@ struct sock_filter bpf_code[] = {
     
     - 시작 화면
         
-        ![image.png](image%206.png)
+        ![image.png](assets/svg%206.png)
         
     
     - socket 모드 화면
         
-        ![image.png](image%207.png)
+        ![image.png](assets/image%207.png)
         
     
     - justforfun 모드 화면
         
-        ![image.png](image%208.png)
+        ![image.png](assets/image%208.png)
         
     
     - monitor 모드 화면
         
-        ![image.png](image%209.png)
+        ![image.png](assets/image%209.png)
         
 3. Victim vm에서 확인
     - Wireshark
@@ -1696,11 +1696,11 @@ struct sock_filter bpf_code[] = {
         
         - shell 연결 전
             
-            ![image.png](image%2010.png)
+            ![image.png](assets/image%2010.png)
             
         - shell 연결 후
             
-            ![image.png](image%2011.png)
+            ![image.png](assets/image%2011.png)
             
 
 <aside>
